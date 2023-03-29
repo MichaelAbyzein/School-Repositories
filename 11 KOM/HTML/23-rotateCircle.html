@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revolving Circle</title>
+</head>
+<style>
+    .ball {
+        width: 6rem;
+        height: 6rem;
+        background-color: green;
+        border-radius: 3rem;
+        animation: revolve 5s infinite;
+        position: absolute;
+
+    }
+
+    @keyframes revolve {
+        0% {
+            background: red;
+            top: 0px;
+            left: 0px;
+        }
+        25% {
+            background: blue;
+            top: 0px;
+            left: 255px;
+        }
+        50% {
+            background: purple;
+            left: 255px;
+            top: 255px;
+        }
+        75% {
+            background: grey;
+            left: 0px;
+            top: 255px;
+        }
+        100% {
+            background: yellow;
+            top: 0px;
+            left: 0px;
+        }
+    }
+</style>
+<body>
+    <div class="ball"></div>
+</body>
+</html>

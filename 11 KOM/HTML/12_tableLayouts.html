@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            float: left;
+            width: 100%;
+            background-color: #d08f26db;
+        }
+        header > img, header > h1 {
+            margin-right: 10px;
+            display: inline;
+        }
+        header > img {
+            height: 64px;
+        }
+        footer {
+            width: 100%;
+            background-color: #09c3cddb;
+            text-align: center;
+            font-style: italic;
+        }
+        section.main {
+            width: 100%;
+            display: table;
+        }
+        article, aside.left, aside.right {
+            display: table-cell;
+        }
+        aside.left {
+            width: 200px;
+            background-color: #a4e304db;
+        }
+        aside.right {
+            width: 125px;
+            background-color: #ca612cdb;
+        }
+        p.hidden {
+            color: #ffffffdb;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="image/giveyouup.png">
+        <h1>Welcome To The Ricksurance</h1>
+    </header>
+    <section class="main">
+        <aside class="left">
+            <ul>
+                <li><a href="#">Mission</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Our Team</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </aside>
+        <article>
+            <p>We're no strangers to love. You know the rules and so do I (do I). A full commitment's what I'm thinking of.	
+            You wouldn't get this from any other guy. I just wanna tell you how I'm feeling. Gotta make you understand.
+            Never gonna give you up. Never gonna let you down. Never gonna run around and desert you. Never gonna make you cry.
+            Never gonna say goodbye. Never gonna tell a lie and hurt you. We're no strangers to love. You know the rules and so do I (do I). A full commitment's what I'm thinking of.	
+            You wouldn't get this from any other guy. I just wanna tell you how I'm feeling. Gotta make you understand.
+            Never gonna give you up. Never gonna let you down. Never gonna run around and desert you. Never gonna make you cry.
+            Never gonna say goodbye. Never gonna tell a lie and hurt you.<p class="hidden">Source: "https://www.youtube.com/watch?v=2-zFa1NuU5s"</p></p>
+        </article>
+        <aside class="right">
+            <p>
+                <strong>
+                    Free Promo Code
+                </strong>
+            </p>
+            <p>From 10% - 75% Off!</p>
+        </aside>
+    </section>
+    <footer>
+        <p>
+            Free Use Copyright. Served For Educational Purposes (They Live In Your Walls).
+        </p>
+    </footer>
+</body>
+</html>

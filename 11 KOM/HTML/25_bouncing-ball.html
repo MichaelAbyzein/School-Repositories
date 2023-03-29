@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouncing Ball</title>
+
+    <style>
+        .ball {
+            position: relative;
+            width: 128px;
+            height: 128px;
+            border-radius: 100%;
+            background-color: black;
+            animation: bounce 1s infinite alternate;
+            animation-timing-function: ease;
+        }
+        @keyframes bounce {
+            0% {
+                left: -10%;
+                top: 40px;
+            }
+            100% {
+                left: calc(100% - 80px);
+                top: 40px;
+            }
+        }
+    </style>
+<body>
+    <div class="ball">
+        <!-- Imagine making a Quake Engine on this thing... it would be very epik!-->
+    </div>
+</body>
+</html>

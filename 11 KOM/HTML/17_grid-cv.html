@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid CV (Rickspace)</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: radial-gradient(#d23383, #ba57ef);
+        }
+        header {
+            float: left;
+            width: 100%;
+            background-image: radial-gradient(#251aa2db, #850f72);
+        }
+        header > img, header > h1 {
+            margin-right: 10px;
+            display: inline;
+        }
+        header > img {
+            height: 64px;
+            margin-top: 25px;
+            margin-left: 10px;
+        }
+        header > nav {
+            background-image: linear-gradient(#2fceff, #ec1b92);
+        }
+        header nav ul.container {
+            list-style-type: none;
+            grid-area: header;
+            justify-content: space-evenly;
+        }
+        header nav ul li {
+            display: inline;
+            padding-left: 14%;
+        }
+        header nav ul li a {
+            text-decoration: none;
+            color: #ffffff;
+        }
+        header nav ul li a:active, header nav ul li a:hover {
+            color: #f2a3a3;
+            font-weight: bold;
+        }
+        aside.left {
+            background-image: radial-gradient(circle at 50% 75%, #94f54e, #a550ca);
+            grid-area: left;
+        }
+        .main aside.left img {
+            height: 250px;
+            padding-top: 25px;
+            margin-left: 25px;
+            justify-content: center;
+        }
+        .main aside.left img:hover {
+            transform: rotate(360deg);
+            transition-duration: 3s;
+            transition-timing-function: linear;
+        }
+        .main {
+            display: grid;
+            background-image: radial-gradient(circle at 50% 50%, #eae8e8, #ff3131);
+            grid-template-columns: 250px auto;
+            grid-template-areas: "left main";
+            width: 100%;
+            column-gap: 20px;
+        }
+        .content {
+            grid-area: main;
+        }
+        footer {
+            width: 100%;
+            color: white;
+            background-image: linear-gradient(#2fceff, #ec1b92);
+            grid-area: footer;
+            margin-top: 20px;
+            text-align: center;
+            font-style: italic;
+        }
+        
+        .profile-info {
+            list-style-type: none;
+            padding: 1px;
+            margin-left: 24px;
+        }
+        .profile-info hr {
+            margin-right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.discordapp.com/attachments/594476920872370196/1014890249584906321/giveyouup.png">
+        <h1>Welcome To The Ricksurance</h1>
+        <nav>
+            <ul class="container">
+                <li class="home"><a href="https://cdn.discordapp.com/attachments/594476920872370196/1014902653878272081/seal-of-aprroval.png">Home</a></li>
+                <li class="about"><a href="content/bifid/hardwote.key">About</a></li>
+                <li class="discord"><a href="https://discord.gg/c5TejVH7">Discord</a></li>
+                <li class="github"><a href="https://github.com/wooseonyftdmjialgr">Github</a></li>
+                <li class="youtube"><a href="https://www.youtube.com/c/101-123">YouTube</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="main">
+        <article class="content">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo voluptates labore necessitatibus doloremque eius tenetur accusamus minus rem nihil minima ullam temporibus est provident exercitationem, perferendis in, ducimus autem, mollitia facere. Eum iure inventore consequuntur itaque qui cupiditate hic sed deleniti odit, consequatur quaerat optio, ex facere quia id, quis accusantium porro eaque molestiae ipsa fugit officia obcaecati! Fugit quaerat nesciunt neque illo temporibus, laboriosam ipsum pariatur quasi sint. Magni explicabo perspiciatis nesciunt cumque reprehenderit doloremque, laudantium voluptatum? Nam molestiae eos totam fugiat repellat ipsa cupiditate deleniti? At incidunt assumenda blanditiis! Voluptatibus nulla numquam eos corporis illum iure mollitia quia.</p>
+            
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, fuga blanditiis, dolore quas itaque mollitia ex, reiciendis expedita eaque quod rerum enim ea. Alias ab, quia quam maiores iure saepe aliquam? Sed in iure labore consequatur obcaecati dolorem quod? Quas ipsum eaque corporis quidem labore, accusantium, eos, inventore dignissimos voluptate tempora sit delectus rem enim. Dolore accusantium assumenda alias, culpa consequatur dignissimos voluptatibus a, molestias consectetur, quasi sequi quibusdam. Quidem, eaque animi. Quo eligendi voluptatum voluptatem corporis nemo similique tempore assumenda ipsam, nam cupiditate nostrum quos dolorem quasi optio delectus nesciunt, repellendus id suscipit totam dolore hic alias eum porro.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos, itaque quisquam temporibus mollitia voluptatibus repudiandae ipsa consequatur vitae. Veritatis quidem suscipit recusandae reiciendis architecto! Labore, dolores natus animi doloremque et iusto. Quod ab dignissimos fugit reiciendis accusantium, enim ea quo corrupti hic vero laudantium placeat rem veniam atque nulla, quibusdam natus! Optio quasi sequi at sit blanditiis. Corporis accusamus magnam, quos illo hic ea doloremque consequuntur sequi illum aliquid est expedita omnis modi, rerum reprehenderit similique! Harum, quaerat? Corporis enim veritatis mollitia itaque eos. Nostrum tempore ipsam laborum sed, iusto quia! Dignissimos laudantium, neque nihil praesentium ad molestias quis magnam.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque reiciendis ullam dolorum nemo debitis illo, beatae ipsam aut asperiores quisquam? Reprehenderit, ab sapiente explicabo magnam dolorum in saepe consequatur numquam maxime deserunt ratione inventore iusto labore illum accusantium maiores libero alias. Dolor ullam in sed consequuntur fugiat, magnam libero veritatis labore modi vitae. Voluptatum, reprehenderit. Repellat inventore quis aperiam neque, enim nostrum veritatis veniam asperiores harum? Maiores impedit voluptatibus nam sunt ex obcaecati dolorem mollitia dolore animi placeat fugit corporis ducimus quisquam praesentium necessitatibus temporibus minus voluptatum, ea earum id optio consectetur at quasi eos. Blanditiis laborum quae aliquam.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque atque reiciendis ullam dolorum nemo debitis illo, beatae ipsam aut asperiores quisquam? Reprehenderit, ab sapiente explicabo magnam dolorum in saepe consequatur numquam maxime deserunt ratione inventore iusto labore illum accusantium maiores libero alias. Dolor ullam in sed consequuntur fugiat, magnam libero veritatis labore modi vitae. Voluptatum, reprehenderit. Repellat inventore quis aperiam neque, enim nostrum veritatis veniam asperiores harum? Maiores impedit voluptatibus nam sunt ex obcaecati dolorem mollitia dolore animi placeat fugit corporis ducimus quisquam praesentium necessitatibus temporibus minus voluptatum, ea earum id optio consectetur at quasi eos. Blanditiis laborum quae aliquam.</p>
+        </article>
+        <aside class="left">
+            <img src="https://cdn.discordapp.com/attachments/594476920872370196/1014890204915580938/walteh.png" alt="profile-pic">
+            <ul class="profile-info">
+                <hr>
+                <li>Name : Michael Abyzein </li>
+                <li>Age : 16</li>
+                <li>Gender : Male</li>
+                <li>Contact : +132-782-8133</li>
+            </ul>
+        </aside>
+    </section>
+    <footer>
+        <p>
+            Free Use Copyright. Served For Educational Purposes.
+        </p>
+    </footer>
+</body>
+</html>

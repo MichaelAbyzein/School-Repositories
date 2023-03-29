@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Grid</title>
+    <style>
+        body {
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			float: left;
+			width: 100%;
+            /* height: 50px; */
+			background-color: #F38181;
+		}
+
+        header > img {
+            height: 50px;
+        }
+
+		header > img, header > h1 {
+			margin-right: 10px;
+			display: inline;
+		}
+
+        header > nav {
+            background-color: #FCE38A;
+        }
+
+        header nav ul.container {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        .main {
+            width: 100%;
+            display: grid;
+            /* grid-template-columns: 200px auto 125px; */
+            /* grid-template-areas: "left main right"; */
+            grid-template-columns: 200px auto;
+            grid-template-areas: "left main";
+            column-gap: 10px;
+            background-color: #EAFFD0;
+
+        }
+
+        article {
+            grid-area: main;
+        }
+
+        aside.left {
+            background-color: #95E1D3;
+            grid-area: left;
+
+        }
+
+        aside.left ul{
+            list-style-type: none;
+            margin: 1px;
+            padding: 1px;
+        }
+
+        aside.left ul img {
+            padding-top: 0px;
+            margin-left: 10px;
+            padding-left: 10px;
+            height: 200px;
+            width: 150px;
+        }
+
+        footer {
+			width: 100%;
+			background-color: #cccccc;
+			text-align: center;
+			font-style: italic;
+		}
+
+        /* aside.right {
+            background-color: azure;
+            grid-area: right;
+        } */
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="https://cdn.discordapp.com/attachments/867712003496738816/1010123175293624341/twitter-logo.jpeg" alt="">
+        <h1>Jiro's CV</h1>
+        <nav>
+                <ul class="container">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Github</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+        </nav>
+    </header>
+    <section class="main">
+        
+
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati non consectetur minima accusantium excepturi laboriosam distinctio impedit et autem maxime nemo, alias aspernatur aliquam assumenda! Tenetur sint, iure vel ea molestias repellat saepe voluptatum assumenda qui totam! Enim iusto ipsam, incidunt blanditiis et recusandae adipisci repellendus voluptatibus temporibus vel ad molestias, earum quasi quaerat aspernatur aliquid, illo odio id? Sint impedit, odit provident quia officiis dolores ab necessitatibus eius eligendi alias molestias, exercitationem nostrum et. Praesentium aut odio aliquam temporibus vero ipsam totam vitae ab. Maxime odit recusandae minus, adipisci eveniet inventore dicta aperiam fugiat ullam reprehenderit ipsam, sunt omnis?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod veritatis ipsum fuga eos libero laudantium dolore non ut voluptatibus aperiam id explicabo placeat nostrum, beatae reprehenderit? Commodi repudiandae facilis ducimus?Lorem ipsum dolor sit amet consectetur adipisicing elit. At pariatur recusandae exercitationem praesentium neque quisquam eveniet reprehenderit dolores similique nobis rerum rem ullam, culpa eum, doloremque fuga laudantium quae corrupti.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati non consectetur minima accusantium excepturi laboriosam distinctio impedit et autem maxime nemo, alias aspernatur aliquam assumenda! Tenetur sint, iure vel ea molestias repellat saepe voluptatum assumenda qui totam! Enim iusto ipsam, incidunt blanditiis et recusandae adipisci repellendus voluptatibus temporibus vel ad molestias, earum quasi quaerat aspernatur aliquid, illo odio id? Sint impedit, odit provident quia officiis dolores ab necessitatibus eius eligendi alias molestias, exercitationem nostrum et. Praesentium aut odio aliquam temporibus vero ipsam totam vitae ab. Maxime odit recusandae minus, adipisci eveniet inventore dicta aperiam fugiat ullam reprehenderit ipsam, sunt omnis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam corporis, velit impedit amet, delectus voluptatibus ipsum itaque quia deleniti inventore in voluptatum voluptates id ratione aut error dolorem eius odio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, quaerat modi. Molestias perferendis id sed quibusdam. Repellat mollitia tenetur, necessitatibus delectus ab, quibusdam aliquid, architecto dolore doloremque esse assumenda. Dignissimos!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit delectus, rem aliquam eos saepe, sint ut non amet doloribus veritatis sunt eum recusandae, voluptatibus obcaecati id dignissimos inventore eaque quo.</p>
+
+        </article>
+
+        <aside class="left">
+            <ul>
+                <img src="img1.jpeg" alt="">
+                <hr>
+                <li>Name : Jiro Nathan Lee</li>
+                <li>Age : 15</li>
+                <li>Gender : Male</li>
+            </ul>
+        </aside>
+
+        <!-- <aside class="right">
+            <p><strong>Special Promo</strong></p>
+            <p>The best choice to The best future.</p>
+        </aside> -->
+
+    </section>
+
+    <footer>
+        <p>
+            Copyright information usually goes down here.
+        </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Navigation</title>
+    <style type="text/css">
+        body {
+            font: 12pt, Helvetica, sans-serif;
+        }
+        nav {
+            width: 150px;
+            float: left;
+            margin-right: 20px;
+            margin-top: 6px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            border-bottom: 1px solid black;
+        }
+        nav ul li a:link, nav ul li a:visited {
+            background-color: #628794;
+            color: white;
+            display: block;
+            font-weight: bold;
+            font-size: 10pt;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+        nav ul li a:hover, nav ul li a:active {
+            background-color: white;
+            color: black;
+            display: block;
+            font-weight: bold;
+            font-size: 10pt;
+            padding-top: 3px;
+            padding-bottom: 3px
+        }
+        nav ul {
+            list-style-type: none;
+        }
+        nav ul ul {
+            margin: 0px;
+            padding: 0px;
+        }
+        nav ul ul li a{
+            padding-left: 15px;
+        }
+        section.main {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Mission</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Executive Team</a></li>
+                <ul>
+                    <li><a href="#">&raquo; CEO</a></li>
+                    <li><a href="#">&raquo; CFO</a></li>
+                    <li><a href="#">&raquo; COO</a></li>
+                    <li><a href="#">&raquo; Other</a></li>
+                </ul>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section class="main">
+        <header>
+            <h1>About Us</h1>
+            <p>We're no strangers to love. You know the rules and so do I (do I). A full commitment's what I'm thinking of.	
+                You wouldn't get this from any other guy. I just wanna tell you how I'm feeling. Gotta make you understand.
+                Never gonna give you up. Never gonna let you down. Never gonna run around and desert you. Never gonna make you cry.
+                Never gonna say goodbye. Never gonna tell a lie and hurt you. We're no strangers to love. You know the rules and so do I (do I). A full commitment's what I'm thinking of.	
+                You wouldn't get this from any other guy. I just wanna tell you how I'm feeling. Gotta make you understand.
+                Never gonna give you up. Never gonna let you down. Never gonna run around and desert you. Never gonna make you cry.
+                Never gonna say goodbye. Never gonna tell a lie and hurt you.</p>
+            <ul>
+                <li>
+                    <p>
+                        <a href="#">Mission</a>
+                        We're no strangers to love. You know the rules and so do I (do I). A full commitment's what I'm thinking of.	
+			            You wouldn't get this from any other guy. I just wanna tell you how I'm feeling. Gotta make you understand.
+			            Never gonna give you up. Never gonna let you down. Never gonna run around and desert you. Never gonna make you cry.
+			            Never gonna say goodbye. Never gonna tell a lie and hurt you.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <a href="#">History</a>
+                        We're no strangers to love. You know the rules and so do I (do I). A full commitment's what I'm thinking of.	
+			            You wouldn't get this from any other guy. I just wanna tell you how I'm feeling. Gotta make you understand.
+			            Never gonna give you up. Never gonna let you down. Never gonna run around and desert you. Never gonna make you cry.
+			            Never gonna say goodbye. Never gonna tell a lie and hurt you.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <a href="#">Executive Team</a>
+                        We're no strangers to love. You know the rules and so do I (do I). A full commitment's what I'm thinking of.	
+			            You wouldn't get this from any other guy. I just wanna tell you how I'm feeling. Gotta make you understand.
+			            Never gonna give you up. Never gonna let you down. Never gonna run around and desert you. Never gonna make you cry.
+			            Never gonna say goodbye. Never gonna tell a lie and hurt you.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <a href="#">About Us</a>
+                        We're no strangers to love. You know the rules and so do I (do I). A full commitment's what I'm thinking of.	
+			            You wouldn't get this from any other guy. I just wanna tell you how I'm feeling. Gotta make you understand.
+			            Never gonna give you up. Never gonna let you down. Never gonna run around and desert you. Never gonna make you cry.
+			            Never gonna say goodbye. Never gonna tell a lie and hurt you.
+                    </p>
+                </li>
+            </ul>
+        </header>
+    </section>
+</body>
+</html>

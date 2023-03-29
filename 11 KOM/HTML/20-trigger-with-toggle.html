@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Hover (Click Box)</title>
+    <style>
+        .container {
+            display: flex;
+            justify-content: center;
+        }
+        .box {
+            margin-top: 20%;
+            height: 100px;
+            width: 100px;
+            background-color: crimson;
+            justify-content: center;
+            display: flex;
+            
+        }
+
+        .smol-box {
+            height: 30%;
+            width: 30%;
+            margin-top: 35%;
+            background-color: white;
+        }
+
+        div.box.clicked {
+            transform: rotate(360deg);
+            transition: 2s linear;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <div class="smol-box"></div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    // const clickedBox = function () {
+    //     document.querySelector(".box").classList.toggle("clicked");
+    // }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelector(".box").onclick = function() {
+            this.classList.toggle("clicked");
+        };
+    })
+</script>
+</html>

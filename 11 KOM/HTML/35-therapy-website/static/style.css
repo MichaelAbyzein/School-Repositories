@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Silkscreen&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    overflow-x: hidden;
+}
+
+/* NAV CONFIG */
+
+header nav {
+    display: flex;
+    background: #1981d6;
+    color: #e6e3e3;
+    justify-content: space-around;
+    /* padding: 20px; */
+    height: 50px;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+header nav ul li a {
+    color: #e9e9e9;
+    text-decoration: none;
+    font-size: 0.5cm;
+}
+
+p.motto {
+    font-size: 0.25cm;
+}
+
+header nav ul li a:hover {
+    color: #cfcece;
+    text-decoration: none;
+    font-size: 0.5cm;
+}
+
+.btn-login {
+    background: #f4f4f4;
+    color: #14a2e4;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 30px;
+    transition: 1s;
+}
+
+.btn-login:hover {
+    transform: scale(0.85);
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-toggle-span{
+    display: block;
+    width: 18px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 3px;
+}
+section.hero {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: #cbcbcb url('../static/img/therapist.png') center / cover no-repeat;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+section.hero .hero-content{
+    margin-left: 15%;
+}
+
+section.hero .hero-content h1 {
+    color: #1c43a6;
+    margin: 20px 0px 20px;
+    font-size: 2em;
+}
+
+section.hero .hero-content h3 {
+    color: #3296de;
+    margin: 20px 0px 20px;
+    font-size: 1.25em;
+}
+
+section.hero .hero-content .hero-form {
+    width: 200px;
+    max-width: 100%;
+}
+
+section.hero .hero-content .hero-form input:first-child {
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid #165ebc;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+section.hero .hero-content .hero-form input[type="password"] {
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid #165ebc;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+section.hero .hero-content .hero-form input[type="email"] {
+    width: 100%;
+    padding: 14px 130px 14px 15px;
+    border: 2px solid #165ebc;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+section.hero .hero-content .hero-form input:last-child {
+    padding: 10px 30px;
+    border: 2px solid #1b6bbb;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    background: #3050c1;
+    color: white;
+}
+
+header nav ul hr {
+    border: 0.5px solid white;
+}
+
+/* ABOUT SECTION */
+
+section.about {
+    background-color: #1c43a6;
+    width: 100%;
+    height: auto;
+}
+
+section.about .about-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+
+section.about .about-content .about-card {
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 65%;
+    height: 100%;
+}
+
+section.about .about-content .about-card img {
+    width: 280px;
+    border-radius: 30px;
+}
+
+section.about .about-content .about-card hr {
+    border: 0.5px solid white;
+}
+
+section.about .about-content .about-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #e2dddd;
+}
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    height: auto;
+}
+
+footer .top-footer {
+    background-color: #3371af;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.contact-text {
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
+    justify-content: center;
+}
+
+footer .bottom-footer {
+    height: auto;
+    background-color: #ffff19;
+}
+
+.top-info {
+    margin: 30px 0px 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-content: center
+}
+
+.top-info li {
+    padding-top: 10px;
+}
+
+/* Icons */
+.icon {
+    width: 36px;
+    height: 36px;
+}
+
+.mobile-icon {
+    display: none;
+}
+
+.logo {
+    display: flex;
+}
+
+.social {
+    color: white;
+    text-decoration: none;
+    padding-left: 10px;
+}
+
+.top-info li {
+    list-style: none;
+}
+
+.footer-img-s {
+    width: 32px;
+}
+
+/* EGG */
+
+.icon.clicked {
+    content: url("../static/img/ledogenew.png");
+    animation: spinboi 2s infinite linear;
+}
+
+@keyframes spinboi {
+    0% {
+        transform: rotate(-360deg);
+    }
+}
+
+/* FOR MOBILE */
+@media screen and (max-width: 576px) {
+    header nav ul.menu-nav {
+        flex-direction: column;
+        position: absolute;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: rgba(55, 177, 222, 0.8);
+        height: 100vh;
+        top: 0;
+        right: 0;
+        transform: translateX(100%);
+        margin-top: 50px;
+        transition: all 0.45s linear;
+    }
+
+    header nav ul.menu-nav li {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .mobile-icon {
+        display: flex;
+        width: 32px;
+    }
+
+    header nav ul hr {
+        width: 85%;
+        border: 0.5px solid white;
+    }
+
+    header nav ul.menu-nav.clicked {
+        transform: translateX(0);
+        /* transition: all 0.5s linear; It's not a bug, it's a feature. */
+    }
+
+    header nav ul.menu-nav li a {
+        font-size: 1.5rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        height: 15px;
+        justify-content: space-evenly;
+    }
+}

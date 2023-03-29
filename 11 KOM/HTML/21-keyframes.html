@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Solar Systemic -->
+</head>
+<style>
+    .wood-block {
+        height: 12rem;
+        width: 12rem;
+        margin: 3rem auto;
+        animation: breakit 5s infinite;
+        animation-direction: alternate;
+    }
+
+    @keyframes breakit {
+        from {
+            background-color: red;
+            transform: scale(-0.5) rotate(50deg);
+        }
+
+        to {
+            background-color: purple;
+            transform: scale(1.2) rotate(0deg);
+        }
+    }
+</style>
+<body>
+    <div class="wood-block"></div>
+</body>
+</html>

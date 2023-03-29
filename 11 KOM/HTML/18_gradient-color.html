@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Background</title>
+    <style>
+        body {
+            height: 100vh;
+            background-image: linear-gradient(gray, white);
+            background-repeat: no-repeat;
+        }
+        .container {
+            width: 60rem;
+            /* height: 100rem; */
+            margin: 0 auto;
+            /* background-color: darkcyan; */
+            display: flex;
+            justify-content: space-between;
+        }
+        .grad {
+            /* float: left;
+            margin-right: 10rem; */
+            width: 10rem;
+            height: 20rem;
+            background-color: wheat;
+        }
+        .one {
+            background-image: linear-gradient(to bottom right, red, #fcfc69);
+        }
+        .two {
+            background-image: linear-gradient(to top right, black, purple);
+        }
+        .three {
+            background-image: radial-gradient(circle at 50% 70%, #2c0c71, #238af0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="grad one"></div>
+        <div class="grad two"></div>
+        <div class="grad three"></div>
+    </div>
+</body>
+</html>

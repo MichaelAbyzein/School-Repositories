@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Less) Simple Solar Revolution</title>
+    <!-- Oh boy! Sign of overworked mind!-->
+    <style>
+        .body {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .sun {
+            width: 128px;
+            height: 128px;
+            background-color: gold;
+            border-radius: 50%;
+            left: 50%;
+            bottom: 45%;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+        }
+        .merc-orbit {
+            width: 256px;
+            height: 256px;
+            border-radius: 100%;
+            left: -52%;
+            bottom: -52%;
+            border: 1.5px solid black;
+            animation: orbit 4s infinite linear;
+            position: absolute;
+        }
+        .ven-orbit {
+            width: 384px;
+            height: 384px;
+            border-radius: 100%;
+            left: -102%;
+            bottom: -102%;
+            border: 1.5px solid black;
+            animation: reversed-orbit 12s infinite linear;
+            position: absolute;
+        }
+        .ert-orbit {
+            width: 512px;
+            height: 512px;
+            border-radius: 100%;
+            left: -152%;
+            bottom: -152%;
+            border: 1.5px solid black;
+            animation: orbit 8s infinite linear;
+            position: absolute;
+        }
+        .mars-orbit {
+            width: 640px;
+            height: 640px;
+            border-radius: 100%;
+            left: -202%;
+            bottom: -202%;
+            border: 1.5px solid black;
+            animation: orbit 16s infinite linear;
+            position: absolute;
+        }
+        .lun-orbit {
+            width: 64px;
+            height: 64px;
+            border-radius: 100%;
+            bottom: -54%;
+            left: -54%;
+            border: 1.5px solid black;
+            animation: orbit 2s infinite linear;
+            position: absolute;
+        }
+        .mars {
+            width: 24px;
+            height: 24px;
+            left: 30%;
+            bottom: -1.5%;
+            background-color: darkred;
+            border-radius: 100%;
+            position: relative;
+        }
+        .earth {
+            width: 32px;
+            height: 32px;
+            left: 30%;
+            bottom: 0%;
+            background-color: blue;
+            border-radius: 100%;
+            position: relative;
+        }
+        .venus {
+            width: 32px;
+            height: 32px;
+            left: 30%;
+            bottom: 1%;
+            background-color: #bebe3c;
+            border-radius: 100%;
+            position: relative;
+        }
+        .mercury {
+            width: 16px;
+            height: 16px;
+            left: 30%;
+            bottom: 0%;
+            background-color: #747474;
+            border-radius: 100%;
+            position: relative;
+        }
+        .moon {
+            width: 12px;
+            height: 12px;
+            left: 10%;
+            bottom: 0%;
+            background-color: grey;
+            border-radius: 100%;
+            position: relative;
+        }
+
+        @keyframes orbit {
+            0% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes reversed-orbit {
+            0% {
+                transform: rotate(-360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sun"> <!-- Trully, the centre of our daily live.. -->
+        <div class="merc-orbit"> <!-- Orbits are very unefficient, but this will look neat!-->
+            <div class="mercury"></div> <!-- Most of the balls didn't move, the orbit is... -->
+        </div>
+        <div class="ven-orbit">
+            <div class="venus"></div>
+        </div>
+        <div class="ert-orbit">
+            <div class="earth">
+                <div class="lun-orbit">
+                    <div class="moon"></div>
+                </div>
+            </div>
+        </div>
+        <div class="mars-orbit">
+            <div class="mars"></div>
+        </div> <!-- More... More... MOREEEE!!!!-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some Funny Variable</title>
+    <style media="screen">
+        :root {
+            --blue: #13acf3;
+            --white: #e4e4e4;
+        }
+        body {
+            background: var(--blue);
+        }
+        h1 {
+            border-bottom: 2px solid var(--white);
+        }
+        .container {
+            color: var(--white);
+            background: var(--blue);
+            padding: 15px;
+        }
+        button {
+            background: var(--white);
+            color: var(--blue);
+            border: 1px solid var(--white);
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Using the var() Function</h1>
+
+    <div class="container">
+        <h2>Lorem, ipsum.</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia ea, eum nobis nihil cum, modi veritatis voluptatum itaque ducimus iste explicabo est temporibus? Id, fugit.</p>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea alias consequuntur sunt iste, enim porro labore distinctio suscipit! Corporis molestiae quibusdam, repellendus ipsa quasi impedit.</p>
+        <p>
+            <button>Yes</button>
+            <button>No</button>
+        </p>
+    </div>
+</body>
+</html>

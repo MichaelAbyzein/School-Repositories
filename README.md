@@ -1,2 +1,2 @@
-# 10TH-GRADE
+# My School Repositories
 (2021/2022)

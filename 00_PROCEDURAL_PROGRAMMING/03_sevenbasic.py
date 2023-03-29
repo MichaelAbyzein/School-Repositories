@@ -1,0 +1,6 @@
+print(3**7)
+print(2-3)
+print(16/4)
+print(20//2)
+print(1+8)
+print(6-1)

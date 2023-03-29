@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Flash Kard</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container {
+            width: 100%;
+            height: 100vh;
+            box-sizing: border-box;
+            background-color: #1ddd29;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+
+        class Game extends React.Component {
+
+            constructor(props) {
+                super(props);
+                this.state = {
+                    num1 : Math.floor((Math.random() * 10)),
+                    num2 : Math.floor((Math.random() * 10)),
+                    oprlist : ["+", "-", "*"], // Man, If I figured out how to do the division, it would be great.
+                    opr : "+", // Always start with an addition!
+                    color : "black",
+                    score : 0,
+                    respondlist : ["Correct Answer!", "Incorrect Answer!", "You Win!", "Game Over!"], // Damn, list work with this stuff...
+                    respondText : "",
+                    answer : ""
+                }
+            }
+
+            returnQuestionPage = function() {
+                return(
+                    <div className="container">
+                        <h1 style={{'color' : this.state.color}}>{this.state.num1} {this.state.opr} {this.state.num2} = ?</h1>
+                        <br></br>
+                        <input type="text" value={this.state.answer} placeholder="Put your answer here" onChange={this.updateResponse} onKeyPress={this.checkResponse}/>
+                        <br></br>
+                        <p>Your score is : {this.state.score}</p>
+                        <br></br>
+                        <p>{this.state.respondText}</p>
+                    </div>
+                )
+            }
+
+            returnWinPage = function() {
+                return(
+                    <div className="container">
+                        <h1 style={{'color' : this.state.color}}>{this.state.respondlist[2]}</h1>
+                    </div>
+                )
+            }
+
+            returnLosePage = function() {
+                return(
+                    <div className="container" style={{'background-color' : this.state.color}}>
+                        <h1 style={{'color' : "black"}}>{this.state.respondlist[3]}</h1>
+                    </div>
+                )
+            }
+
+            render = () => {
+                if (this.state.score > 4) {
+                    return this.returnWinPage()
+                } if (this.state.score == -5) {
+                    return this.returnLosePage()
+                } else {
+                    return this.returnQuestionPage()
+                }
+            }
+
+            updateResponse = event => {
+                this.setState({
+                    answer : event.target.value
+                })
+            }
+
+            generateQuestion = function() {
+                this.setState(state => ({
+                    score : this.state.score + 1,
+                    answer : "",
+                    num1 : Math.floor((Math.random() * 10)),
+                    num2 : Math.floor((Math.random() * 10)),
+                    color : 'black',
+                    opr : this.state.oprlist[Math.floor(Math.random() * this.state.oprlist.length)],
+                    respondText : this.state.respondlist[0]
+                }))
+            }
+
+            checkResponse = event => {
+                if (event.key == "Enter"){
+                    if (JSON.parse(this.state.answer) == this.state.num1 + this.state.num2) {
+
+                        this.generateQuestion()
+
+                    } else if (JSON.parse(this.state.answer) == this.state.num1 * this.state.num2) {
+
+                        this.generateQuestion()
+
+                    } else if (JSON.parse(this.state.answer) == this.state.num1 - this.state.num2) {
+
+                        this.generateQuestion()
+
+                    } else {
+
+                        this.setState(state => ({
+                            score : state.score - 1,
+                            answer : "",
+                            num1 : Math.floor((Math.random() * 10)),
+                            color : 'red',
+                            num2 : Math.floor((Math.random() * 10)),
+                            opr : this.state.oprlist[Math.floor(Math.random() * this.state.oprlist.length)],
+                            respondText : this.state.respondlist[1]
+                        }))
+
+                    }
+                }
+            }
+
+        }
+
+        class App extends React.Component {
+            render = () =>{
+                return(
+                    <Game />
+                )
+            }
+        }
+
+        ReactDOM.render(<App/>, document.getElementById("app"))
+
+    </script>
+</body>
+</html>

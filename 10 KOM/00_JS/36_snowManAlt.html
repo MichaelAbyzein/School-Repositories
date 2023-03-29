@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Draw Snowman(Alt)</title>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="800" style="background-color: grey;"></canvas>
+	<script type="text/javascript">
+		let canvas = document.getElementById("canvas");
+		let ctx = canvas.getContext("2d");
+
+		let circle = function (x, y, radius, color, isFilled) {
+			ctx.strokeStyle = color;
+			ctx.beginPath();
+			ctx.arc(x, y, radius, 0, 2*Math.PI, false);
+			ctx.closePath();
+			if (isFilled){
+				ctx.fillStyle = color;
+				ctx.fill();
+			}
+		}
+
+		let line = function (x, y, xdir, ydir, color){
+			ctx.strokeStyle = color;
+			ctx.beginPath();
+			ctx.moveTo(x, y);
+			ctx.lineTo(x+xdir, y+ydir);
+			ctx.closePath();
+			ctx.stroke();
+		}
+
+		let snowMan = function(x, y, color){
+			let head = circle(x, y, 50, color, true);
+			let leftEye = circle(x-20, y-20, 10, "Black", true);
+			let rightEye = circle(x+20, y-20, 10, "Black", true);
+			let nose = circle(x, y, 5, "Orange", true);
+
+			// mouth
+			ctx.beginPath();
+			ctx.arc(x, y+10, 20, 0, Math.PI, false)
+			ctx.closePath();
+			ctx.stroke();
+			ctx.fill();
+
+			// hand
+			let lefthand = line(x, y, 10, 100, "Brown")
+
+			let body = circle(x, y+120, 80, color, true);
+		}
+
+		snowMan(500, 200, "White")
+	</script>
+</body>
+</html>

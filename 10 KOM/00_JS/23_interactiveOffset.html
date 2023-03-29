@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Offset</title>
+</head>
+<body>
+	<h1 id="heading">Hello World!</h1>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		// $('#heading').offset({left: 200});
+		// $('#heading').offset({top : 500});
+		// $('#heading').offset({left : 0, top : 0});
+		let xPos = 0;
+		let yPos = 0;
+		let movex = () => {
+			$('#heading').offset({left : xPos});
+			xPos++;
+			if (xPos > 700){
+				xPos = 0;
+			}
+		}
+
+		let stopAnimate = () => {
+			clearInterval(mainloop);
+		}
+
+		let mainloop = setInterval(movex, 3);
+	</script>
+	<button onclick="stopAnimate()">Freeze!</button>
+</body>
+</html>

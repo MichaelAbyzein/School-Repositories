@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Find the Burried Treasure</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h1>Find da Treasure!</h1>
+	<img src="https://cdn.discordapp.com/attachments/896354219261583372/941608946463014933/treasuremap.jpg", style="width: 400px;">
+	<p id="message">
+		
+	</p>
+	<script type="text/javascript">
+		console.log(`x : ${$('img').position().left}, y : ${$('img').position().top}`)
+
+		function getRandomNumber(init_position, size) {
+			return Math.floor(Math.random() * (size + init_position));
+		}
+
+		function getDist(event, target) {
+			let dx = event.offsetX - target.x;
+			let dy = event.offsetY - target.y;
+
+			return Math.sqrt( (dx^2) + (dy^2) )
+		}
+		function getMessage(dist) {
+			if (dist < 10) {
+				return "Burning"
+			} else if (dist < 20) {
+				return "Very Warm"
+			} else if (dist < 40) {
+				return "Warm"
+			} else if (dist < 160) {
+				return "Cold"
+			} else  if (dist < 320) {
+				return "Very Cold"
+			} else {
+				return "Freezing"
+			}
+		}
+		let width = 400;
+		let height = 400;
+
+		let target = {
+			x : getRandomNumber($('img').position().left, width),
+			y : getRandomNumber($('img').position().top, height)
+		}
+
+		$('img').click( function (event) {
+			let dist = getDist(event, target);
+			let message = getMessage(dist);
+
+			$('#message').text(message);
+
+			if (dist < 10){
+				alert(`Found the Treasure!`)
+			}
+		})
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>

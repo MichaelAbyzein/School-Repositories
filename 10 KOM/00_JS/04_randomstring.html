@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Random String</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var abjad = "abcdefghijklmnopqrstuvwxyz";
+		var RandomString = "";
+
+		var char;
+		for (var i=0; i < 8; i++){
+			char = abjad[Math.floor(Math.random()*abjad.length)];
+			RandomString += char;
+		}
+		console.log(RandomString);
+	</script>
+</body>
+</html>

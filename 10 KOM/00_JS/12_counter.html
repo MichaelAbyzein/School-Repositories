@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Counter JS</title>
+	<script type="text/javascript">
+		var counter = 0;
+		function countercount() {
+			counter++;
+			document.querySelector("#counter").innerHTML = counter;
+			if (counter % 10 === 0){
+				alert("Counter is at "+counter+" !.");
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1 id="counter">0</h1>
+	<button onclick="countercount()">Click to Count!</button>
+</body>
+</html>

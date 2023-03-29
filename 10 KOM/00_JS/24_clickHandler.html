@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Click Handler</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h1>ඞ</h1>
+	<script type="text/javascript">
+		function handler(event) {
+			console.log(`Im click at${event.pageX}, ${event.pageY}.`);
+			$("h1").offset({left : event.pageX, top : event.pageY});
+		}
+
+		$('html').click(handler);
+	</script>
+</body>
+</html>

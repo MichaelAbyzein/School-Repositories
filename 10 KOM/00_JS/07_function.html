@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Function Javascript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var ourFunction = function(){
+			console.log("OUR Function...")
+		}
+		ourFunction();
+
+		var loopprint = function(times, print){
+			for (var i = 0; i < times; i ++){
+				console.log(i+" "+print);
+			}
+		}
+
+		loopprint(10, "E Cord")
+
+		//shorthand
+
+		function double(number){
+			return number*2;
+		}
+
+		var double3 = double(3);
+		console.log(double3);
+
+		//buatkan fungsi untuk menentukan perolehan medali
+		//rules : < 3pts -> bronze < 7pts -> silver >= 7 -> gold
+
+		function getpoint(score){
+			if (score < 3){
+				return "You get Bronze!";
+			} else if (score < 7){
+				return "You got Silver!";
+			} 
+			return "You got Gold!";
+		}
+
+		console.log(getpoint(8));
+	</script>
+</body>
+</html>

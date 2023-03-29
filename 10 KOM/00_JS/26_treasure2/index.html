@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Find the Burried Treasure</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h1>Find the Treasure! (South America Edition)</h1>
+	<p id="message">
+		
+	</p>
+	<img src="https://cdn.discordapp.com/attachments/594476920872370196/941893854762790952/800px-South_America.svg.png">
+	<script type="text/javascript">
+		console.log(`x : ${$('img').position().left}, y : ${$('img').position().top}`)
+
+		let clickchances = 30;
+
+		function getRandomNumber(init_position, size) {
+			return Math.floor(Math.random() * (size + init_position)) + Math.ceil(init_position);
+		}
+
+		function getDist(event, target) {
+			let dx = event.offsetX - target.x;
+			let dy = event.offsetY - target.y;
+
+			return Math.sqrt( (dx^2) + (dy^2) )
+		}
+		function getMessage(dist) {
+			if (dist < 10) {
+				return `Almost There! ${clickchances} Chances Left!`
+			} else if (dist < 30) {
+				return `Close By! ${clickchances} Chances Left!`
+			} else if (dist < 60) {
+				return `Very Near! ${clickchances} Chances Left!`
+			} else if (dist < 180) {
+				return `Not here! ${clickchances} Chances Left!`
+			} else  if (dist < 250) {
+				return `Very Far! ${clickchances} Chances Left!`
+			} else {
+				clickchances = clickchances - 1
+				return `Too Far! ${clickchances} Chances Left!`
+			}
+			if (clickchances < 0) {
+				return "Game Over!"
+			}
+			if (dist < 10){
+				return "You Won!"
+			}
+		}
+		let width = $('img').width();
+		let height = $('img').height();
+
+		let target = {
+			x : getRandomNumber($('img').position().left, width),
+			y : getRandomNumber($('img').position().top, height)
+		}
+
+		$('img').click( function (event) {
+			let dist = getDist(event, target);
+			let message = getMessage(dist);
+			if (dist > 3){
+				if (clickchances > 0){
+					clickchances = clickchances - 1
+				}
+			}
+			$('#message').text(message);
+
+			if (dist < 3){
+				alert(`Found the Treasure!`)
+			} else if (clickchances < 0){
+				alert('Game Over!')
+			}
+		})
+	</script>
+</body>
+</html>

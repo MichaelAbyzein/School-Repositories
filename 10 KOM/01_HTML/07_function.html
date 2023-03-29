@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Function Javascript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var ourFirstFunction = function(){
+			console.log("This is my first function");
+		}
+
+		ourFirstFunction();
+
+
+		var printingMultipleTimes = function(howManyTimes, whatToPrint){
+			for (var i = 0; i < howManyTimes; i++){
+				console.log(i+" "+whatToPrint);
+			}
+		}
+
+		printingMultipleTimes(10, "I love mom...")
+
+
+		//shorthand
+
+		function double(number) {
+			return number*2
+		}
+
+		var double5 = double(5);
+
+		//buatkan fungsi untuk menentukan perolehan mendali
+		//rules < 3pts -> bronze, < 7 pts -> silver,  >= 7 pts -> gold
+		// getMedals(pts)
+
+		function getMedal(pts) {
+			// body...
+			if (pts < 3){
+				return "bronze";
+			} else if (pts < 7){
+				return "silver";
+			}
+			return "gold";
+		}
+
+		console.log(getMedal(5));
+
+
+
+	</script>
+</body>
+</html>

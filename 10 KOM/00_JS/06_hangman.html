@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hangman</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var words = [
+		"mice",
+		"rabbit",
+		"cat",
+		"bat",
+		"deer"
+		];
+
+		var word = words[Math.floor(Math.random()*words.length)];
+
+		// console.log(word);
+
+		var AnsRray = []; // "_ _ _ _"
+
+		for (var i=0; i < word.length; i++){
+			AnsRray[i] = "_";
+			// AnsArr.push("_");
+		}
+
+		var remainingLetters = word.length;
+
+		while (remainingLetters > 0){
+			alert("What ... :" + AnsRray.join(" "));
+
+			var guess = prompt("Guess a letter to or click cancel to stop playing");
+
+			if (guess.length < 1){
+				var test = 12
+				console.log(test);
+			} else if (guess.length > 1){
+				alert("Please enter a single letter");
+			} else {
+				for (var i = 0; i < word.length; i++){
+					if (word[i] == guess){
+						AnsRray[i] = guess;
+						remainingLetters--;
+					}
+				}
+			}
+		}
+
+	</script>
+</body>
+</html>

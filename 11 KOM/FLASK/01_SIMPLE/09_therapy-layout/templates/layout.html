@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block favicon %}{% endblock favicon %}
+    <script type="text/javascript" src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-icon logo">
+                <img src="{{ url_for('static', filename='img/neutral-shield.png') }}" class="icon">
+                <div class="main-title">
+                    <h1 class="webind">Albatross Therapy Centre</h1>
+                    <p class="motto">To go further and beyond</p>
+                </div>
+            </div>
+            <ul class="nav-item-menu menu-nav">
+                <hr>
+                <li><img src="{{ url_for('static', filename='img/home.png') }}" class="mobile-icon"><a href="{{ url_for('index') }}">Home</a></li>
+                <hr>
+                <li><img src="{{ url_for('static', filename='img/quemark.png') }}" class="mobile-icon"><a href="{{ url_for('about') }}">About</a></li>
+                <hr>
+                <li><img src="{{ url_for('static', filename='img/gallery.png') }}" class="mobile-icon"><a href="{{ url_for('gallery') }}">Gallery</a></li>
+                <hr>
+                <li><img src="{{ url_for('static', filename='img/calls.png') }}" class="mobile-icon"><a href="#contact">Contact</a></li>
+                <hr>
+            </ul>
+    
+            <a href="{{ url_for('login') }}" class="nav-item btn-login">Log In</a>
+    
+            <div class="nav-item menu-toggle">
+                <span class="menu-toggle-span"></span>
+                <span class="menu-toggle-span"></span>
+                <span class="menu-toggle-span"></span>
+            </div>
+        </nav>
+    </header>
+    {% block main %}
+    {% endblock main %}
+    <footer>
+        <div class="top-footer" id="contact">
+            <div class="contact-text">
+                <h2>Our Contact</h2>
+                <li>Email : term45@gmail.com</li>
+                <li>Phone : 999-145-872-8765</li>
+                <li>Address : Rosework Street 25, Albuquerque, New Mexico</li>
+            </div>
+            <div class="top-info">
+                <h1 class="social-title">Follow Us</h1>
+                <hr>
+                <li><img src="{{ url_for('static', filename='img/youtube.png') }}" class="footer-img-s"><a href="#" class="social">Youtube</a></li>
+                <li><img src="{{ url_for('static', filename='img/facebook.png') }}" class="footer-img-s"><a href="#" class="social">Facebook</a></li>
+                <li><img src="{{ url_for('static', filename='img/instagram.png') }}" class="footer-img-s"><a href="#" class="social">Instagram</a></li>
+            </div>
+        </div>
+        <div class="bottom-footer">
+            <div class="bottom-info">
+                <p>Copyright © 1989-2022 - Albatross Finance Company All Right Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Buat Flask dari 35_therapy_website jadi Flask, templates menggunakan konsep layout, dan terdiri dari 4 route  -->
+</body>
+</html>

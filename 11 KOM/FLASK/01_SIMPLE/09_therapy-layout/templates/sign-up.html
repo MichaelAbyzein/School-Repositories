@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+
+{% block title %}Create a New Account{% endblock title %}
+
+{% block favicon %}<link rel="icon" type="image/x-icon" href="static/img/secureicon.ico">{% endblock favicon %}
+
+{% block main %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>The Best Therapy Center in Town</h1>
+        <h3>Create a New Account</h3>
+        <div class="hero-form">
+            <form action="{{ url_for('auth') }}" method="post">
+                <input type="username" name="username" placeholder="Username" autocomplete="off" required autofocus>
+                <input type="password" name="password" placeholder="Password" autocomplete="off">
+                <input type="email" name="E-Mail" placeholder="E-Mail Address" autocomplete="off">
+                <input type="submit" name="submit" value="Register">
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock main %}

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}Form Search!{% endblock title %}
+
+{% block main %}
+    <h1>Search on 8Flow</h1>
+
+    <form action="{{ url_for('search') }}">
+        <input type="text" name="query" placeholder="Search Anything" autocomplete="off" required autofocus>
+        <button>Search</button>
+    </form>
+
+{% endblock main %}

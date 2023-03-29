@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block title %}Insert Photo / Image{% endblock title %}
+
+{% block main %}
+<h1>Nyeh Names</h1>
+    <img src="{{ url_for('static', filename='funny-neco.gif') }}" style="width: 420px;">
+        <ul>
+            {% for name in names %}
+                <li>{{name}}</li>
+            {% endfor %}
+        </ul>
+<a href="{{ url_for('more') }}">More info click here ...</a>
+{% endblock main %}

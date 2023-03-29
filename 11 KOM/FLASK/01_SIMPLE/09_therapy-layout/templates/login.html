@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block title %}Login To Existing Account{% endblock title %}
+
+{% block favicon %}<link rel="icon" type="image/x-icon" href="static/img/secureicon.ico">{% endblock favicon %}
+
+{% block main %}
+<section class="hero">
+    <div class="hero-content">
+        <h1>The Best Therapy Center in Town</h1>
+        <h3>Login To Exisiting Account</h3>
+        {% if err %}
+    
+        <p class="error">Error: {{ err }}</p>
+
+        {% endif %}
+        <div class="hero-form">
+            <form action="{{ url_for('auth') }}" method="post">
+                <input type="username" name="username" placeholder="Username" autocomplete="off" required autofocus>
+                <input type="password" name="password" placeholder="Password" autocomplete="off">
+                <input type="submit" name="submit" value="Log In">
+            </form>
+            <div class="no-account">
+                <p>Don't have an account ?</p>
+                <a href="{{ url_for('signup') }}">Register</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock main %}

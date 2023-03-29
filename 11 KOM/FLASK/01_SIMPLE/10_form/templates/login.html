@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}Form Login!{% endblock title %}
+
+{% block main %}
+    
+    <h1>Login First</h1>
+
+    {% if err %}
+    
+        <p>Error: {{ err }}</p>
+
+    {% endif %}
+    
+    <form action="{{ url_for('auth') }}" method="post">
+        <input type="text" name="username" placeholder="Username" autocomplete="off" required autofocus></input>
+        <input type="password" name="password" placeholder="Password" autocomplete="off" required></input>
+        <button>Login</button>
+    </form>
+
+{% endblock main %}

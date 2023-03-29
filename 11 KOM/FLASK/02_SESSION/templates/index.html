@@ -1,0 +1,17 @@
+
+{% extends layout.html %}
+
+{% block title %}Home{% endblock title %}
+
+{% block main %}
+    <h1>Hello, Gute Morgen!</h1>
+    <ul>
+        <li>
+            <a href="{{ url_for('user'. username='')}}">User Profile</a>
+        </li>
+        <li>
+            <a href="{{ url_for('login')}}">Login</a>
+        </li>
+    </ul>
+{% endblock main %}
+

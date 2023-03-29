@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX</title>
+    <style>
+        table, tr, td {
+            border: 1px black solid;
+            border-collapse: collapse;
+            padding: 2px;
+        }
+
+        img {
+            width: 50px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <h1>OMDB API</h1>
+    <input id="search-entry" type="text" placeholder="What's movie?" autofocus>
+    <button>Search</button>
+    <div class="result">
+        <h2>Result : </h2>
+        <table>
+
+        </table>
+    </div>
+</body>
+</html>

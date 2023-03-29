@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notfix Search Engine</title>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function () {
+            
+            document.querySelector("#submit-task").disabled = true;
+
+            document.querySelector("#entry-task").onkeyup = function (){
+
+                if (document.querySelector("#entry-task").value.trim().length > 0) {
+                    document.querySelector("#submit-task").disabled = false;
+                } else {
+                    document.querySelector("#submit-task").disabled = true;
+                }
+
+            };
+            document.querySelector("#form-task").onsubmit = function (){
+                const li = document.createElement('li');
+
+                li.innerHTML = document.querySelector("#entry-task").value;
+
+                document.querySelector("#histories").append(li)
+
+                document.querySelector("#entry-task").value = "";
+
+                document.querySelector("#submit-task").disabled = true;
+
+                return false;
+            }
+        })
+    </script>
+    <style>
+        body {
+            background: url("desk.jpg");
+        }
+        .le-image {
+            width: 420px;
+            height: 120px;
+            align-self: center;
+            margin-bottom: 25px;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            margin-top: 230px;
+        }
+        .form-task {
+            justify-content: center;
+        }
+        .container ul li {
+            color: purple;
+            list-style: none;
+            text-align: start;
+        }
+        .container ul {
+            margin-top: 0;
+            margin-left: 2.53%;
+            background-color: white;
+            width: 22.95%;
+            align-self: center;
+        }
+        .container input[type="text"] {
+            border: 3px solid #ffffff;
+            width: 25%;
+            height: 35%;
+        }
+        .container input[type="submit"] {
+            background-color: white;
+            border: 3px solid #ff6262;
+            border-radius: 5px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="notfix(lmao).png" class="le-image">
+        <form id="form-task">
+            <input type="submit" name="" id="submit-task" class="submit-button" value="🔍">
+            <input type="text" name="" id="entry-task" placeholder="" autocomplete="off" class="entry">
+        </form>
+        <ul id="histories"></ul>
+    </div>
+</body>
+</html>

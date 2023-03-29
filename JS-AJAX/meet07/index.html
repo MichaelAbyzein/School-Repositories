@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather Checker</title>
+    <script src="./script.js"></script>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            background: url(https://i.gifer.com/vF.gif) no-repeat;
+            background-size: cover;
+            height: 100%;
+        }
+        .main-title {
+            color: white;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px;
+        }
+        .loading-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .btn-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .table-container {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .check-btn {
+            width: auto;
+            border-radius: 25%;
+            background: #1414e6;
+            border: 2px solid #303030;
+            color: whitesmoke;
+
+        }
+        .check-btn:hover {
+            transform: scale(0.85);
+            background: #ceced7;
+        }
+        table,th,td {
+            border : 2px solid rgb(0, 0, 0);
+        }
+        th,td,tr {
+            padding: 5px;
+        }
+        .sun {
+            width: 64px;
+            height: 64px;
+            background-color: gold;
+            border-radius: 50%;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            display: none;
+            top: 30%;
+        }
+        .earth-orbit {
+            padding: 0;
+            width: 128px;
+            height: 128px;
+            border-radius: 100%;
+            right: 51.5%;
+            bottom: 50%;
+            border: 1.5px solid black;
+            animation: orbit 4s infinite linear;
+            position: relative;
+            display: none;
+        }
+        .earth {
+            padding: 0;
+            width: 16px;
+            height: 16px;
+            left: 18%;
+            bottom: 0%;
+            background-color: blue;
+            border-radius: 100%;
+            position: relative;
+            display: none;
+        }
+        .percent-count {
+            color: black;
+            font-weight: bold;
+            padding-bottom: 128px;
+            position: absolute;
+            left: 29%;
+            display: none;
+            transform: scale(0.9);
+        }
+        @keyframes orbit {
+            0% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h2 class="main-title">
+            Real-Time Weather Checker
+        </h2>
+        <div class="btn-container">
+            <button class="check-btn" id="check-btn">Start Checker</button>
+        </div>
+        <div class="table-container"></div>
+        <div class="loading-container">
+            <div class="sun">
+                <p class="percent-count">0%</p>
+                <div class="earth-orbit">
+                    <div class="earth"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

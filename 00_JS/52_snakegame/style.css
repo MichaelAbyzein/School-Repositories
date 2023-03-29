@@ -1,0 +1,8 @@
+.container {
+	display: flex;
+	justify-content: center;
+}
+canvas {
+	margin-top : 8rem;
+	background-color: grey;
+}

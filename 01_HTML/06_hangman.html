@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hangman</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var words = [
+		"kelinci",
+		"tikus",
+		"kucing",
+		"babi",
+		"kancil"
+		];
+
+		var word = words[Math.floor(Math.random()*words.length)];
+		// console.log(word);
+
+		var ansArr = []; // "t _ _ _ _" -> view oleh pemain
+
+		for (var i = 0; i < word.length; i++){
+			ansArr[i] = "_";
+			// ansArr.push("_");
+		}
+
+		var remainingLetters = word.length;
+
+
+		while (remainingLetters > 0){
+			alert("What ... :  " + ansArr.join(" "));
+
+			var guess = prompt("Guess a letter or click cancel to stop playing");
+
+			if (guess == null){
+				break;
+			} else if (guess.length != 1){
+				alert("Please enter a single letter");
+			} else {
+				for (var i = 0; i < word.length; i++){
+					if (word[i] == guess){
+						ansArr[i] = guess;
+						remainingLetters--;
+					}
+				}
+			}
+
+		}
+
+
+
+	</script>
+</body>
+</html>

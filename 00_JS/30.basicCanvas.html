@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Canvas</title>
+</head>
+<body>
+	<canvas id="canvas" width="400" height="400" style="border: 1px solid black;background-color: #781023;"></canvas>
+	<script type="text/javascript">
+		let canvas = document.getElementById("canvas");
+		let ctx = canvas.getContext("2d"); //pen
+		ctx.fillRect(100, 200, 80, 80); //position und dimensions (x, y, width, height)
+	</script>
+</body>
+</html>

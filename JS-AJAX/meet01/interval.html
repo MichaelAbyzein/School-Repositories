@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage Test</title>
+    <script type="text/javascript">
+        if (!localStorage.getItem('counter')) localStorage.setItem('counter', 0);
+
+        document.addEventListener("DOMContentLoaded", () => {
+            let counter = localStorage.getItem('counter');
+
+            document.querySelector("#reset-btn").onclick = () => {
+                if (localStorage.getItem('counter')){
+                    clearInterval(myInterval);
+                    localStorage.removeItem('counter');
+                    document.querySelector("#counter").innerHTML = 0;
+                }
+            }
+
+            document.querySelector("#start-btn").onclick = () => {
+                if (!localStorage.getItem('counter')){
+                    localStorage.setItem('counter', 0);
+                    counter = 0;
+                    myInterval = setInterval(counting, 1000);
+                }
+            }
+
+            document.querySelector("#counter").innerHTML = counter;
+
+            function counting() {
+                counter++;
+                document.querySelector("#counter").innerHTML = counter;
+                localStorage.getItem('counter', counter);
+            }
+
+            let myInterval = setInterval(counting, 1000);
+
+        })
+    </script>
+</head>
+<body>
+    <h1 id="counter">0</h1>
+    <button id="reset-btn">Clear Local Storage</button>
+    <button id="start-btn">Start Counting</button>
+</body>
+</html>

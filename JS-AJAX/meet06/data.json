@@ -1,0 +1,16 @@
+{
+    "name":"Palembang",
+    "id":1633070,
+    "timezone":25200,
+    "base":"stations",
+    "sys":{"id":9424,"country":"ID","sunrise":1676070536,"sunset":1676114503},
+    "coord":{"lon":104.7458,"lat":-2.9167},
+    "weather":{"weather":"rain","weather_specified":"light rain"},
+    "dt":1676124801,
+    "main":{"temp":300.2,"feels_like":303.92,"temp_min":300.2,"temp_max":300.2,"pressure":1009,"humidity":89},
+    "visibility":10000,
+    "wind":{"speed":2.06,"deg":360},
+    "rain":{"1h":0.65},
+    "clouds":{"all":75},
+    "cod":200    
+}
